@@ -1,0 +1,29 @@
+body {
+    display: flex;
+    gap: 0.5rem;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    background: #b700ff;
+    background: linear-gradient(90deg,rgba(183, 0, 255, 1) 0%, rgba(255, 0, 255, 1) 35%, rgba(183, 0, 255, 1) 100%);
+
+}
+
+.main-container {
+    background: white;
+    padding: 20px 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.button {
+    height: 30px;
+    width: 100px;
+}
+
+.title-container {
+    margin-bottom: 20px;
+}

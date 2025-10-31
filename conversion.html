@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles/conversion.css">
+</head>
+<body>
+    <div class="title-container">
+        <h1>Conversion Tool</h1>
+    </div>
+    <div class="main-container">
+        <label for="conversion-types">Select an operation: </label>
+        
+        <select class="button" name="conversion-types" id="conversion-types">
+            <option value="ctof">Celsius to Fahrenheit</option>
+            <option value="ftoc">Fahrenheit to Celsius</option>
+            <option value="mtoft">Meters to Feet</option>
+            <option value="fttom">Feet to Meters</option>
+        </select>
+        <input class="button" type="number" id="inputValue" placeholder="Enter Value">
+        <button class="convert-btn button" id="convert-btn">Convert</button>
+        <br>
+        <p id="result"></p>
+    </div>
+    <script src="scripts/conversion.js"></script>
+</body>
+</html>
