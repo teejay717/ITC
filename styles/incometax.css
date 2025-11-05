@@ -45,39 +45,3 @@ a {
     font-size: 1.5rem;
 }
 
-.main-container {
-    background: white;
-    padding: 20px 30px;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    text-align: center;
-}
-
-.button {
-    outline: none;
-    padding: 10px 15px;
-    border-radius: 8px;
-    border: 2px solid #ccc;
-}
-
-select.button {
-    cursor: pointer;
-    background-color: white;
-}
-
-select.button:hover {
-    border-color: #888;
-}
-
-input.button {
-    border: 2px solid #ccc;
-}
-
-input.button:hover {
-    border-color: #888;
-}
-
-.title-container {
-    margin-bottom: 0;
-}
-

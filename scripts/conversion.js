@@ -9,7 +9,10 @@ function computeConversion() {
     const conversionType = document.getElementById("conversion-types").value;   
     let result;
 
-    switch (conversionType) {
+    if (!inputValue) {
+        document.getElementById("result").innerHTML = "Invalid Input! Please enter a valid value."
+    } else {
+        switch (conversionType) {
         case "ctof":
             result = ((inputValue * 1.8) + 32).toFixed(2);
             document.getElementById("result").innerHTML = `${inputValue} Celsius = ${result} Fahrenheit`;
@@ -29,4 +32,7 @@ function computeConversion() {
         default:
             document.getElementById("resultInput").value = "Invalid conversion type.";
     } 
+    }
+
+    
 }
