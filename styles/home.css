@@ -463,6 +463,7 @@ body {
     position: absolute;
     top: 0;
     width: 100%;
+    height: 10vh;
     justify-content: space-around;
     align-items: center;
     background: rgb(255, 255, 255);    
@@ -478,28 +479,94 @@ body {
     display: flex;
     flex-direction: row;
     gap: 2rem;
+    padding: 0;
 }
+
+
 
 a {
     text-decoration: none;
     color: inherit;
     margin: 0;
+    transition: all 300ms ease;
 }
 
 a:hover {
-    text-decoration: none;
+    text-decoration: underline;
     color: inherit;
     margin: 0;
+    color: rgb(218, 218, 218);
+    text-underline-offset: .5rem;
+    text-decoration-color: rgba(181, 181, 181, 0.384);
+    
 }
+
 
 .logo {
     font-size: 1.5rem;
 }
 
-.title {
+.main-container {
+    display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
+    margin-bottom: 20px;
 }
+
+.inline-links {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    padding: 10px 40px;
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 
+        0 8px 32px rgba(0, 0, 0, 0.1),
+        inset 0 1px 0 rgba(255, 255, 255, 0.5),
+        inset 0 -1px 0 rgba(255, 255, 255, 0.1),
+        inset 0 0 2px 1px rgba(255, 255, 255, 0.1);
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.2s;
+}
+
+.inline-links:hover {
+    transform: scale(1.01) ;
+}
+
+.inline-links::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(255, 255, 255, 0.8),
+        transparent
+    );
+}
+
+.inline-links::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 1px;
+    height: 100%;
+    background: linear-gradient(
+        180deg,
+        rgba(255, 255, 255, 0.8),
+        transparent,
+        rgba(255, 255, 255, 0.3)
+    );
+}
+
+
 
 h1 {
     margin: 0;
