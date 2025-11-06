@@ -619,6 +619,7 @@ h1 {
         inset 0 1px 0 rgba(255, 255, 255, 0.3);
     color: white;
     transition: all 0.3s ease;
+    font-size: 1rem;
 }
 
 input.button {
@@ -722,24 +723,26 @@ input.button:hover {
     transform: translateY(0);
 }
 
+.results-row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1.5rem;
+    width: 100%;
+    margin: 0;
+}
+
 .result-text {
+    flex: 1;
     width: 200px;
     text-align: left;
     font-size: 1rem;
     margin: 0;
-}
-
-.results-row {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    gap: 1.5rem;
-    width: 400px;
-    margin: 0;
+    height: 15px;
 }
 
 .result-label {
     font-size: 1rem;
-    justify-self: left;
+    text-align: right;
+    min-width: 100px;
 }
