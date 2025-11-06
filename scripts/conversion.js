@@ -33,6 +33,7 @@ function computeConversion() {
             document.getElementById("resultInput").value = "Invalid conversion type.";
     } 
     }
-
+    
+    document.getElementById("inputValue").value = '';
     
 }
