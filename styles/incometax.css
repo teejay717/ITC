@@ -491,8 +491,18 @@ a {
     font-size: 1.5rem;
 }
 
+h1 {
+    margin-bottom: 0;
+}
+
+.sub-title {
+    margin-top: 0;
+}
+
 .main-container {
     display: flex;
+    flex-direction: column;
+    align-items: center;
     background: rgba(255, 255, 255, 0.15);
     backdrop-filter: blur(16px);
     -webkit-backdrop-filter: blur(16px);
@@ -509,6 +519,37 @@ a {
     overflow: hidden;
     transition: transform 0.2s;
     gap: 2rem;
+    height: auto;
+}
+
+.small-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    padding: 0px 0px;
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 
+        0 8px 32px rgba(0, 0, 0, 0.1),
+        inset 0 1px 0 rgba(255, 255, 255, 0.5),
+        inset 0 -1px 0 rgba(255, 255, 255, 0.1),
+        inset 0 0 2px 1px rgba(255, 255, 255, 0.1);
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.2s;
+    gap: 2rem;
+    height: auto;
+    width: 100%;
+}
+
+.input-row {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
 }
 
 .main-container:hover {
@@ -590,4 +631,58 @@ input.button:hover {
 
 .compute-tax-btn:active {
     transform: translateY(0);
+}
+
+.inline-links {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    height: auto;
+    padding: 0px 50px;
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 
+        0 8px 32px rgba(0, 0, 0, 0.1),
+        inset 0 1px 0 rgba(255, 255, 255, 0.5),
+        inset 0 -1px 0 rgba(255, 255, 255, 0.1),
+        inset 0 0 2px 1px rgba(255, 255, 255, 0.1);
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.2s;
+    margin-top: 20px;
+}
+
+.inline-links:hover {
+    transform: scale(1.01) ;
+}
+
+.inline-links::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(255, 255, 255, 0.8),
+        transparent
+    );
+}
+
+.inline-links::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 1px;
+    height: 100%;
+    background: linear-gradient(
+        180deg,
+        rgba(255, 255, 255, 0.8),
+        transparent,
+        rgba(255, 255, 255, 0.3)
+    );
 }

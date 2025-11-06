@@ -1,9 +1,13 @@
 
 const button = document.getElementById("convert-btn");
+const input = document.getElementById("inputValue");
 
+button.addEventListener("click", () => { 
+    document.getElementById("result").innerHTML = '';
+    input.value = ''
+});
+input.addEventListener("input", computeConversion);
 
-button.addEventListener("click", computeConversion);
-button.addEventListener("click", computeConversion);
 function computeConversion() {
     const inputValue = document.getElementById("inputValue").value;
     const conversionType = document.getElementById("conversion-types").value;   
@@ -32,8 +36,6 @@ function computeConversion() {
         default:
             document.getElementById("resultInput").value = "Invalid conversion type.";
     } 
-    }
-    
-    document.getElementById("inputValue").value = '';
+}
     
 }
