@@ -5,6 +5,11 @@ button.addEventListener("click", calculateFSA);
 function calculateFSA() {
 
     const input = document.getElementById("inputValue").value;
+
+    if (!input) {
+        alert("Invalid Input, Try Again!")
+    } else {
+
     let inputValue = parseInt(input);
     let fact = 1;
     let sum = 0;
@@ -36,3 +41,4 @@ function calculateFSA() {
     document.querySelector(".summation-result").innerHTML = `${sum}`;
     document.querySelector(".average-result").innerHTML = `${average}`;
 }   
+}
