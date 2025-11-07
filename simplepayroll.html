@@ -28,38 +28,46 @@
         </div>
             <p class="sub-title">Assignment #4</b></p>
 
-    <div class="main-container">
-        <div class="inputs-container">
-            <div class="input-row">
-                <p class="label">Employee Name:</p>
-                <input type="text" id="employeeName" class="button"></input>
+    <div class="content-wrapper">
+        <div class="left-section">
+            <div class="main-container">
+                <div class="inputs-container">
+                    <div class="input-row">
+                        <p class="label">Employee Name:</p>
+                        <input type="text" id="employeeName" class="button"></input>
+                    </div>
+                    <div class="input-row">
+                        <p class="label">Days Worked:</p>
+                        <input type="number" id="daysWorked" class="button"></input>
+                    </div>
+                    <div class="input-row">
+                        <p class="label">Daily Rate:</p>
+                        <input type="number" id="dailyRate" class="button"></input>
+                    </div>
+                    <div class="input-row">
+                        <p class="label">Deduction Amount:</p>
+                        <input type="number" id="deduction" class="button"></input>
+                    </div>
+                </div>
             </div>
+            
             <div class="input-row">
-                <p class="label">Days Worked:</p>
-                <input type="number" id="daysWorked" class="button"></input>
+                    <button class="add-button hover-button">Add To Payroll</button>
             </div>
-            <div class="input-row">
-                <p class="label">Daily Rate:</p>
-                <input type="number" id="dailyRate" class="button"></input>
-            </div>
-            <div class="input-row">
-                <p class="label">Deduction Amount:</p>
-                <input type="number" id="deduction" class="button"></input>
-            </div>
-        </div>
-    </div>
-    
-    <div class="input-row">
-            <button class="add-button hover-button">Add To Payroll</button>
-    </div>
-    <div class="delete-container">
-        <div class="input-row">
+            <div class="delete-container">
                 <p class="label">Delete Employee (Line No.):</p>
-                <input class="factorial-result button result-text" name="factorial" placeholder="Enter valid number."></input>
-                <button class="delete-button button hover-button">Delete Employee</button>
+                <div class="delete-input-row">
+                        
+                        <input class="employee-number button result-text" name="factorial" placeholder="Enter valid number."></input>
+                        <button class="delete-button button hover-button">Delete Employee</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="right-section">
+            <div class="table"></div>
         </div>
     </div>
-    <div class="table"></div>
     <script src="scripts/simplepayroll.js"></script>
 </body>
 </html>

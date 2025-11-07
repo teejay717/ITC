@@ -412,12 +412,15 @@ body {
     gap: 0.5rem;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    height: 100vh;
+    justify-content: flex-start;
+    min-height: 100vh;
     margin: 0;
+    padding: 0;
     font-size: 1rem;
     font-family: montserrat;
     color: white;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
     
     --x-0: 93%;
     --y-0: 93%;
@@ -459,8 +462,9 @@ body {
 .navbar {
     background-color: rgb(139, 139, 139);
     display: flex;
-    position: absolute;
+    position: sticky;
     top: 0;
+    z-index: 1000;
     width: 100%;
     height: 10vh;
     justify-content: space-around;
@@ -499,19 +503,63 @@ h1 {
     margin-top: 0;
 }
 
-.inputs-container {
+.content-wrapper {
     display: flex;
     flex-direction: row;
+    gap: 1.5rem;
+    align-items: flex-start;
+    justify-content: center;
+    width: 100%;
+    max-width: 100%;
+    padding: 0 20px;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+.left-section {
+    display: flex;
+    flex-direction: column;
     gap: 1rem;
+    align-items: center;
+}
+
+.right-section {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    min-width: 0;
+    overflow-x: auto;
+    max-width: 800px;
+}
+
+
+.inputs-container {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
     justify-content: center;
     align-items: center;
 }
 
+.input-row {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+}
+.delete-input-row {
+    display: flex;
+    flex-direction: row;
+    gap: .5rem;
+}
+
+
 .main-container {
+    display: flex;
     background: rgba(255, 255, 255, 0.15);
     backdrop-filter: blur(16px);
     -webkit-backdrop-filter: blur(16px);
-    padding: 30px 50px;
+    padding: 2vh 5vh;
     border-radius: 20px;
     border: 1px solid rgba(255, 255, 255, 0.3);
     box-shadow: 
@@ -523,6 +571,9 @@ h1 {
     position: relative;
     overflow: hidden;
     transition: transform 0.2s;
+    font-size: 0.8rem;
+    flex-direction: column;
+    align-items: center;
 }
 
 .main-container:hover {
@@ -589,8 +640,9 @@ h1 {
     color: white;
     transition: all 0.3s ease;
     max-width: 40vh;
-    font-size: 1.1rem;
+    font-size: 1rem;
 }
+
 
 input.button {
     color: white;
@@ -624,11 +676,12 @@ input.button:hover {
     position: relative;
     overflow: hidden;
     transition: transform 0.2s;
-    gap: 2rem;
+    gap: .25rem;
     height: auto;
     width: auto;
-    margin-top: 3vh;
 }
+
+
 
 .delete-container:hover {
     transform: scale(1.01) ;
@@ -658,13 +711,11 @@ input.button:hover {
 }
 
 table {
-    background-color: black;
     border-spacing: 10px 5px;
-    border-collapse: collapse;
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    border-collapse: separate;
+    width: 100%;
+    max-width: 100%;
+    
     background: rgba(255, 255, 255, 0.15);
     backdrop-filter: blur(16px);
     -webkit-backdrop-filter: blur(16px);
@@ -680,16 +731,16 @@ table {
     position: relative;
     overflow: hidden;
     transition: transform 0.2s;
+    font-size: .8rem;
+    box-sizing: border-box;
 
 }
 
 
 td, th {
-
     outline: none;
     padding: 10px 15px;
-    
-    border-radius: 0px;
+    border-radius: 5px;
     background: rgba(255, 255, 255, 0.021);
     backdrop-filter: blur(16px);
     -webkit-backdrop-filter: blur(16px);
@@ -702,18 +753,23 @@ td, th {
 
 
 
+
 th:first-child {
     border-top-left-radius: 20px;
 }
 
 th:last-child {
-    border-top-right-radius: 20px;
+    
 }
 
-tr:last-child td:first-child {
+th.footer {
     border-bottom-left-radius: 20px;
+    border-top-right-radius: 0px;
+    border-top-left-radius: 0px;
 }
 
-tr:last-child td:last-child {
+th.footer {
     border-bottom-right-radius: 20px;
+    border-top-right-radius: 0px;
+    border-top-left-radius: 0px;
 }
