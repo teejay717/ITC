@@ -669,6 +669,7 @@ input.button:hover {
     transition: transform 0.2s;
     margin-top: 20px;
     justify-content: center;
+    font-size: .5rem;
 }
 
 .inline-links:hover {
