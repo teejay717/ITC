@@ -496,7 +496,9 @@ a {
 }
 
 h1 {
+    margin-top: 0.5rem;
     margin-bottom: 0;
+    font-size: 2rem;
 }
 
 .sub-title {
@@ -681,7 +683,9 @@ input.button:hover {
     width: auto;
 }
 
-
+.employee-number {
+    width: 9vh;
+}
 
 .delete-container:hover {
     transform: scale(1.01) ;
@@ -689,7 +693,8 @@ input.button:hover {
 
 .label {
     margin-top: 0;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0;
+    font-size: 0.8rem;
 }
 
 .hover-button {
@@ -755,21 +760,21 @@ td, th {
 
 
 th:first-child {
-    border-top-left-radius: 20px;
+    border-top-left-radius: 10px;
 }
 
 th:last-child {
-    
+    border-top-right-radius: 10px;
 }
 
 th.footer {
-    border-bottom-left-radius: 20px;
+    border-bottom-left-radius: 10px;
     border-top-right-radius: 0px;
     border-top-left-radius: 0px;
 }
 
 th.footer {
-    border-bottom-right-radius: 20px;
+    border-bottom-right-radius: 10px;
     border-top-right-radius: 0px;
     border-top-left-radius: 0px;
 }
