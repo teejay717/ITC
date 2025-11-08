@@ -505,7 +505,7 @@ a {
 }
 
 h1 {
-    margin-top: 0.5rem;
+    margin-top: 5vh;
     margin-bottom: 0;
     font-size: clamp(1.5rem, 4vw, 2.5rem);
 }
@@ -592,7 +592,7 @@ h1 {
     position: relative;
     overflow: hidden;
     transition: transform 0.2s;
-    font-size: 0.8rem;
+    font-size: 1rem;
     flex-direction: column;
     align-items: center;
 }
@@ -713,7 +713,7 @@ input.button:hover {
 .label {
     margin-top: 0;
     margin-bottom: 0;
-    font-size: 0.8rem;
+    font-size: 1rem;
 }
 
 .hover-button {
