@@ -816,7 +816,7 @@ th.footer {
     overflow: hidden;
     transition: transform 0.2s;
     margin-top: 20px;
-    font-size: 0.75rem;
+    font-size: 1rem;
 }
 
 .inline-links:hover {
