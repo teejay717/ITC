@@ -416,9 +416,12 @@ body {
     justify-content: center;
     height: 100vh;
     margin: 0;
+    padding: 0 20px;
     font-size: 1rem;
     font-family: montserrat;
     color: white;
+    box-sizing: border-box;
+    overflow-x: hidden;
     
     --x-0: 93%;
     --y-0: 93%;
@@ -463,7 +466,9 @@ body {
     position: absolute;
     top: 0;
     width: 100%;
-    height: 10vh;
+    height: auto;
+    min-height: 10vh;
+    padding: 10px 20px;
     justify-content: space-around;
     align-items: center;
     background: rgb(255, 255, 255);    
@@ -471,7 +476,10 @@ body {
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
     border-bottom: 1px solid rgba(255, 255, 255, 0.3);
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1); 
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+    flex-wrap: wrap;
+    gap: 1rem;
 }
 
 .nav-links {
@@ -480,6 +488,9 @@ body {
     flex-direction: row;
     gap: 2rem;
     padding: 0;
+    margin: 0;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 
@@ -512,13 +523,23 @@ a:hover {
     align-items: center;
     justify-content: center;
     margin-bottom: 20px;
+    text-align: center;
+    padding: 0 20px;
+}
+
+.main-container h1 {
+    font-size: clamp(1.5rem, 5vw, 3rem);
+}
+
+.main-container p {
+    font-size: clamp(0.9rem, 2vw, 1.2rem);
 }
 
 .inline-links {
     background: rgba(255, 255, 255, 0.15);
     backdrop-filter: blur(16px);
     -webkit-backdrop-filter: blur(16px);
-    padding: 10px 40px;
+    padding: 25px 60px;
     border-radius: 20px;
     border: 1px solid rgba(255, 255, 255, 0.3);
     box-shadow: 
@@ -530,6 +551,45 @@ a:hover {
     position: relative;
     overflow: hidden;
     transition: transform 0.2s;
+    max-width: 90%;
+}
+
+/* Responsive Media Queries */
+@media (max-width: 768px) {
+    .navbar {
+        justify-content: center;
+        padding: 15px 10px;
+    }
+    
+    .logo {
+        font-size: 1.2rem;
+    }
+    
+    .nav-links {
+        gap: 1rem;
+        font-size: 0.9rem;
+    }
+    
+    .inline-links {
+        padding: 10px 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    
+    .nav-links {
+        flex-direction: column;
+        gap: 0.5rem;
+        text-align: center;
+    }
+    
+    .inline-links .nav-links {
+        flex-direction: column;
+    }
 }
 
 .inline-links:hover {
