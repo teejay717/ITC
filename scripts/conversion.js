@@ -3,8 +3,16 @@ const button = document.getElementById("convert-btn");
 const input = document.getElementById("inputValue");
 
 button.addEventListener("click", () => { 
+    const inputValue = document.getElementById("inputValue").value;
+    if (!inputValue) {
+        document.getElementById("result").innerHTML = "Nothing to clear here! Try again."
+        setTimeout(() => {
+        document.getElementById("result").innerHTML = "";
+    }, 2000);
+    } else {
     document.getElementById("result").innerHTML = '';
     input.value = ''
+    }
 });
 input.addEventListener("input", computeConversion);
 

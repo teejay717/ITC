@@ -44,7 +44,7 @@ function computeTotal () {
 function deleteEmployee() {
     let deleteEmployee = document.querySelector(".employee-number").value;
 
-    if (deleteEmployee < 0 || deleteEmployee > table.length) {
+    if (deleteEmployee <= 0 || deleteEmployee > table.length) {
         alert("Invalid Employee Number");
         document.querySelector(".employee-number").value = '';
     } else {
@@ -82,7 +82,7 @@ function showPayroll() {
             <td>${employee.daysWorked}</td>
             <td>${employee.dailyRate}</td>
             <td>${grossPay}</td>
-            <td>${employee.deduction}</td>
+            <td>${employee.deduction}</td>  
             <td>${netPay}</td>
             </tr>`;
     }
