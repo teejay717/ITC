@@ -770,6 +770,10 @@ table {
 
 }
 
+table {
+    transform: scale(1.01);
+    }
+
 
 td, th {
     outline: none;
