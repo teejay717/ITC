@@ -718,6 +718,12 @@ h1 {
         width: 100%;          
         max-width: none;
     }
+    input.button {
+    display: flex;
+    flex-wrap: wrap;
+    color: white;
+    max-width: 290px;
+    }
 }
 
 @media (max-width: 480px) {
@@ -732,7 +738,15 @@ h1 {
         align-items: center;
     }
     input.button {
+    display: flex;
+    flex-wrap: wrap;
     color: white;
-    max-width: 80%;
-}
+    max-width: 290px;
+    }
+    .main-container {
+        padding-left: 30px;
+        padding-right: 30px;
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
 }
