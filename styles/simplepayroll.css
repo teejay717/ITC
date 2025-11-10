@@ -533,7 +533,7 @@ h1 {
     justify-content: center;
     width: 100%;
     max-width: 100%;
-    padding: 0 20px;
+    padding: 0 0px;
     margin: 0 auto;
     box-sizing: border-box;
 }
@@ -903,6 +903,7 @@ th.footer {
 
     table {
         font-size: 0.7rem;
+        max-width: 300px;
     }
     
     td, th {
@@ -911,6 +912,11 @@ th.footer {
 }
 
 @media (max-width: 480px) {
+    
+    .label {
+        font-size: 1rem;
+    }
+
     .navbar {
         flex-direction: column;
         gap: 0.5rem;
@@ -923,14 +929,16 @@ th.footer {
     }
     
     .content-wrapper {
-        padding: 0 10px;
+        padding: 0 0px;
     }
     
     table {
-        font-size: 0.65rem;
+        font-size: 0.45rem;
+        max-width: 200px;
     }
     
     td, th {
         padding: 6px 8px;
     }
+
 }
