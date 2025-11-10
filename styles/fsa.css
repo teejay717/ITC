@@ -783,6 +783,9 @@ input.button:hover {
 
 
 @media (max-width: 768px) {
+    h1 {
+        font-size: 1.4rem;
+    }
     .input-row {
         flex-direction: column; 
     }
@@ -797,10 +800,17 @@ input.button:hover {
     .main-container {
         max-width: 250px;
     }
+    #inputValue {
+        max-width: 220px;
+    }
 
 }
 
 @media (max-width: 480px) {
+    h1 {
+        margin-right: 20px;
+        margin-left: 20px;
+    }
     .navbar {
         flex-direction: column;
         
@@ -814,5 +824,8 @@ input.button:hover {
         .results-container {
         width: 300px;
         max-width: 400px;
+    }
+    #inputValue {
+        max-width: 220px;
     }
 }
