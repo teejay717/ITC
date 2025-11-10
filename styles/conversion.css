@@ -741,12 +741,21 @@ h1 {
     display: flex;
     flex-wrap: wrap;
     color: white;
-    max-width: 290px;
+    max-width: 250px;
+    justify-content: center;
+    align-items: center;
+        width: 100%;
+    max-width: 350px;
+    text-align: center;
+    box-sizing: border-box;
     }
     .main-container {
+        display: block;
         padding-left: 30px;
         padding-right: 30px;
         padding-top: 30px;
         padding-bottom: 30px;
+        justify-content: center;
+        align-items: center;
     }
 }
