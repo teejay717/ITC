@@ -31,7 +31,7 @@ function calculateFSA() {
 
     inputValue = originalValue;
 
-    for (i = 0; i < originalValue; i++) {
+    for (let i = 0; i < originalValue; i++) {
         sumAverage += inputValue;
         inputValue--;
         average = sumAverage / originalValue;

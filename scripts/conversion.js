@@ -31,7 +31,7 @@ function computeConversion() {
             break;
         case "ftoc":
             result = ((inputValue - 32) / 1.8).toFixed(2);
-            document.getElementById("result").innerHTML = `${inputValue} Fahreinheit = ${result} Celsius`;
+            document.getElementById("result").innerHTML = `${inputValue} Fahrenheit = ${result} Celsius`;
             break;
         case "mtoft":
             result = ((inputValue * 3.28084).toFixed(2));

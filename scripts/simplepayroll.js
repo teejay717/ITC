@@ -36,11 +36,6 @@ function addToPayroll() {
 }
 }
 
-function computeTotal () {
-    let totalNetPay;
-    totalNetPay += netPay;
-}
-
 function deleteEmployee() {
     let deleteEmployee = document.querySelector(".employee-number").value;
 
