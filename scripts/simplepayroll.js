@@ -1,9 +1,17 @@
 const button = document.querySelector(".add-button");
 const deleteButton = document.querySelector(".delete-button");
+const confirmButton = document.querySelector(".confirm-button");
+const cancelButton = document.querySelector(".cancel-button");
 let table = [];
 
 button.addEventListener("click", addToPayroll);
 deleteButton.addEventListener("click", deleteEmployee);
+confirmButton.addEventListener("click", confirmDelete);
+cancelButton.addEventListener("click", () => {
+
+    document.getElementById("deleteConfirmDialog").close();
+
+})
 
 function initTable() {
     table = [];
@@ -36,8 +44,16 @@ function addToPayroll() {
 }
 }
 
+
 function deleteEmployee() {
+    document.getElementById("deleteConfirmDialog").showModal();
+    showPayroll();
+    }
+
+
+function confirmDelete() {
     let deleteEmployee = document.querySelector(".employee-number").value;
+
 
     if (deleteEmployee <= 0 || deleteEmployee > table.length) {
         alert("Invalid Employee Number");
@@ -45,7 +61,9 @@ function deleteEmployee() {
     } else {
     table.splice(deleteEmployee - 1, 1);
     showPayroll();
-    }
+    document.getElementById("deleteConfirmDialog").close();
+
+}
 }
 
 function showPayroll() {
